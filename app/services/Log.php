@@ -5,7 +5,7 @@ namespace app\services;
 
 class Log
 {
-    private $file = 'log/log.txt';
+    private $file = 'log.txt';
     public $params = [];
 
     public function __construct(array $params) {
