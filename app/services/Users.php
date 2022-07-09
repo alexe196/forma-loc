@@ -45,7 +45,7 @@ class Users
     }
 
     public static function add_users($email, $name, $lastname, $pass) {
-        if(!empty($email). !empty($name) && self::user_validate($email)) {
+        if(self::user_validate($email)) {
             self::$users_arr[count(self::$users_arr)] = array('id' => self::get_id(), 'email' => $email, 'name' => $name,
                                        'lastname' => $lastname, 'pass' => $pass);
 

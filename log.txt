@@ -9,3 +9,5 @@ User Add alexei | Березко | berezkoas@gmail.com | 111 | 111
 User Add alexei | Березко | berezkoas@gmail.com | 111 | 111
 Email already exists  alexei | Березко | test3@gmail.com | 111 | 111
 User Add alexei | Березко | berezkoas@gmail.com | 111 | 111
+Email already exists  alexei | Березко | test3@gmail.com | 111 | 111
+User Add alexei | Березко | berezkoas@gmail.com | 111 | 111
