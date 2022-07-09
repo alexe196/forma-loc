@@ -59,6 +59,10 @@ class Users
         return self::$users_arr[count(self::$users_arr)-1]['id'] + 1;
     }
 
+    public static function get_users() {
+        return self::$users_arr ?? null;
+    }
+
     private function __clone() {}
     private function __construct() {}
 

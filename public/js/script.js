@@ -16,24 +16,25 @@ $(document).ready(function ($) {
             success: function (data) {
 
                let block = $('#message_add_user');
-               if(data==0) {
-                   block.html('User add : ' + $('#exampleInputName').val() + ' ' + $('#exampleInputLastName').val() + ' ' +
-                       ' ' + $('#exampleInputEmail1').val() + ' ' + $('#password1').val());
-                   block.css('display', 'block');
-                   block.removeClass('alert-warning').addClass('alert-success');
-                   $('#add_user_id').css('display', 'none');
-
-               }
-                if(data==1) {
+               if(data==1) {
                     block.html('Email already exists ');
                     block.css('display', 'block');
                     block.addClass('alert-warning');
                 }
-                if(data==2) {
+               else if(data==2) {
                     block.html('The data is not correct');
                     block.css('display', 'block');
                     block.addClass('alert-warning');
-                }
+               }
+               else {
+                    block.html('User add : ' + $('#exampleInputName').val() + ' ' + $('#exampleInputLastName').val() + ' ' +
+                        ' ' + $('#exampleInputEmail1').val() + ' ' + $('#password1').val());
+                    block.css('display', 'block');
+                    block.removeClass('alert-warning').addClass('alert-success');
+                    $('#add_user_id').css('display', 'none');
+                    $('#profile').html(data);
+
+               }
 
             }
         });

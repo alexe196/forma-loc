@@ -9,7 +9,15 @@ use app\services\Users;
 class Controller {
 
     static function index() {
+       $users = Users::get_users();
        require_once 'public/view/forma.php';
+    }
+
+    static function get_user() {
+        ob_start();
+        $users = Users::get_users();
+        echo require_once 'public/view/user_list.php';
+        return ob_end_flush();
     }
 
     static function add_user()
@@ -31,7 +39,7 @@ class Controller {
                 $arr['text'] = 'User Add';
                 $arr['data'] = $request;
                 $log->add_write($arr['text']);
-                return 0;
+                return self::get_user();
 
             } else {
                 $arr['status'] = 'error';
